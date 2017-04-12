@@ -9,10 +9,10 @@
                             <wm-layoutgrid name="layoutgrid1" columns="2">
                                 <wm-gridrow name="gridrow1">
                                     <wm-gridcolumn name="gridcolumn1" colwidth="6" columnwidth="6" class="col-xs-6">
-                                        <wm-picture name="Picture" width="100%"></wm-picture>
+                                        <wm-picture picturesource="bind:Variables.HrdbEmployeeData.dataSet.data[$i].picurl" name="Picture" width="100%"></wm-picture>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn name="gridcolumn2" colwidth="6" columnwidth="6" padding="unset 1.25em" class="col-xs-6">
-                                        <wm-label name="ID" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].picurl" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="ID" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].empId" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
                                         <wm-label name="Name" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].firstname" class="h4" margin="0px unset" whitespace="nowrap"></wm-label>
                                         <wm-label name="JobTitle" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].jobTitle" class="h5" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
                                         <wm-label name="Department" caption="bind:Variables.HrdbEmployeeData.dataSet.department.name" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
@@ -22,6 +22,7 @@
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
+                            <wm-prefab locations="bind:Variables.geoLocation.dataSet" name="googlemaps3" prefabname="googlemaps"></wm-prefab>
                         </wm-card-content>
                     </wm-card>
                 </wm-listtemplate>
